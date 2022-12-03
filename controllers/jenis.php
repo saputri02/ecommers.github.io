@@ -11,9 +11,9 @@ if($aksi=='Save'){
     $ket=$_POST['ket'];
     $simpan=$db->qry($connect, "INSERT INTO tjenis VALUES('','$jenisbarang','$ket')");
     if($simpan)
-       header('location:'.$base_url.'distributor');
+       header('location:'.$base_url.'jenis');
     else{
-        header('location:'.$base_url.'distributor/Add');
+        header('location:'.$base_url.'jenis/Add');
     }       
 }
 if($aksi=='edit'){

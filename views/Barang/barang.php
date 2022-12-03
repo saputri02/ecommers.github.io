@@ -1,5 +1,7 @@
 <div data-role="panel" data-title-caption="List Barang" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>" class="mt-4">
-<table class="table row-hover">
+<table class="table table-bordered table-responsive">
+<th a class="button outline success" href="<?= $base_url; ?>barang/create/">Create data</a></th>
+    <thead class="bg-warning">
     <thead>
         <th>Id Barang</th>
         <th>Nama Barang</th>
@@ -32,7 +34,9 @@
         <td><?= $barang['nmdist']?></td> 
         <td><a class="button warning" href="<?= $base_url.'jual/add/'.$barang['idbarang']?>"><span class="mif-add-shopping-cart"></span></a>
         <a  class="button info" href="<?= $base_url.'barang/edit/'.$barang['idbarang']?>"><span class="mif-pencil"></span></a></td>
-     <td class="button alert"><span class="mif-bin"></span></td>
+        <td><a class="button alert" href="<?= $base_url.'barang/hapus/'.$barang['idbarang']?>" 
+           onclick="return confirm('Yakin dihapus?')"><span class="mif-bin"></span></a></td>  
+           
     </tbody>
     <?php } ?>
 </table>

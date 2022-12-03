@@ -1,8 +1,8 @@
 <?php
 foreach ($data['brg'] as $brg) {
 ?>
-<caption><h1>Data Barang</h1></caption>
-<form action="<?= $base_url.'barang/update'.$brg['idbarang']?> method="post">
+ <h1 class="text-center">Tambah Barang</h1>
+<form action="<?= $base_url.'barang/update'.$brg['idbarang']?>" method="post">
     <div>
         <label for="">Id Barang</label>
         <input type="text" name="idbarang" id=""  value="<?= $brg['idbarang']?>" readonly>
@@ -16,6 +16,7 @@ foreach ($data['brg'] as $brg) {
       <select name="idjenis" id="">
         <option value="<?= $brg['idjenis']?>"><?= $brg['jenisbarang']?></option>
         <option>Pilih</option>
+        <option value=""></option>
         <?php foreach ($data['jenbarang'] as $jen) { ?>
         <option value="<?= $jen['idjenis']?>"><?= $jen['jenisbarang']?></option>
         <?php } ?>
@@ -41,7 +42,7 @@ foreach ($data['brg'] as $brg) {
       </select>
     </div>
     <div>
-        <button type="submit" name="simpan">Simpan</button>
+    <button type="submit" name="simpan">Simpan</button>
         <button type="reset" name="batal">batal</button>
     </div>
 </div>

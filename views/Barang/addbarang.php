@@ -8,9 +8,11 @@ foreach ($data['kdbarang'] as $kdbarang) {
 
 }
 ?>
-<caption><h1>Data Barang</h1></caption>
-<form action="<?= $base_url?>barang/save" method="post">
-    <div>
+<caption>
+        <h1 class="text-center">Tambah Barang</h1>
+    </caption>
+    <form class="justify-content-center align-items-center" action="<?= $base_url ?>barang/save" method="post">
+        <div>
         <label for="">Id Barang</label>
         <input type="text" name="idbarang" id=""  value="<?= $kodebarang?>" readonly>
     </div>

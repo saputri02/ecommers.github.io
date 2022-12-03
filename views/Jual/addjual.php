@@ -29,7 +29,7 @@
     }
      </script>
 
-<caption><h1>Data Jual</h1></caption>
+<h1 class="text-center">Data Jual</h1>
 <div>
   <Form action="<?= $base_url?>jual/save" method="post" name="jual">  
 <div>

@@ -18,3 +18,30 @@ if($aksi=='Save'){
         header('location:'.$base_url.'distributor/Add');
     }       
 }
+if($aksi=='edit'){
+    $iddist=$uri[4];
+    $data['distributor']=$db->query($connect,"SELECT * FROM tdistributor WHERE iddist='$iddist'");
+    $helpers->template('distributor/editdistributor.php',$data);
+}
+if($aksi=='ubah'){
+    $idists=$uri[4];
+    $nmdist=$_POST['nmdist'];
+    $alamat=$_POST['alamat'];
+    $notelp=$_POST['notelp'];
+    $ubah=$db->qry($connect,"UPDATE tdistributor SET nmdist='$nmdist',alamat='$alamat',notelp='$notelp' WHERE iddist='$iddist'");
+    if(ubah)
+        header('location:'.$base_url.'distributor');
+    else{
+        header('location:'.$base_url.'distributor/edit');
+    }  
+}
+if($aksi=='hapus'){
+    $iddist=$uri[4];
+    $hapus=$db->qry($connect,"DELETE FROM tdistributor WHERE iddist='$iddist'");
+    if($hapus)
+        header('location:'.$base_url.'distributor');
+    else{
+        header('location:'.$base_url.'distributor/hapus');
+    }
+      
+}

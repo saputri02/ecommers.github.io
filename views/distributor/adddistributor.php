@@ -1,4 +1,4 @@
-<caption><h1>Data Distributor</h1><caption>
+<h1 class="text-center">Tambah Distributor</h1>
 <form action="<?php echo $base_url?>distributor/Save" method="post">
 <label for="">Nama Distributor</label>
 <input type="text" name="nmdist" id="" required>

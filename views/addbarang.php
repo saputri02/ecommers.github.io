@@ -1,4 +1,4 @@
-<caption><h1>Data Barang</h1></caption>
+<h1 class="text-center">Tambah Barang</h1>
 <form action="" method="post">
     <div>
         <label for="">Id Barang</label>
@@ -36,3 +36,4 @@
     </div>
 </div>
 </form>
+<?php}

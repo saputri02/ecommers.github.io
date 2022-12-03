@@ -1,4 +1,4 @@
-<div data-role="panel" data-title-caption="List Jenis" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>" class="mt-4">
+<div data-role="panel" data-title-caption="List Distributor" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>" class="mt-4">
 <table  class="table row-hover">
         <thead>
             <th>Nomor</th>
@@ -17,12 +17,13 @@
            <td><?= $distributor['nmdist']?></td>
            <td><?= $distributor['alamat']?></td>
            <td><?= $distributor['notelp']?></td>
-           <td  class="button info"><span class="mif-pencil"></span></td>
-           <td class="button alert"><span class="mif-bin"></span></td>
-       <tbody>
+           <td><a  class="button info" href="<?= $base_url.'distributor/edit/'.$distributor['iddist']?>"><span class="mif-pencil"></span></a>
+           <a class="button alert" href="<?= $base_url.'distributor/hapus/'.$distributor['iddist']?>" 
+           onclick="return confirm('Yakin dihapus?')"><span class="mif-bin"></span></a></td>
+           <tbody>
         <?php
           $no++;
         }  
-       ?> 
-       
+        ?>  
 </table>
+      </div>

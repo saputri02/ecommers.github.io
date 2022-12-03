@@ -29,5 +29,14 @@ if($aksi=='edit'){
   $data['brg']=$db->query($connect,"SELECT * FROM vbarang WHERE idbarang=$idbarang");
   $data['jenbarang']=$db->query($connect,"SELECT * FROM tjenis");
     $data['distri']=$db-> query($connect, "SELECT * FROM tdistributor");
-  $helpers->load_view('Barang/editbarang.php',$data);
+  $helpers->template('Barang/editbarang.php',$data);
+}
+if($aksi=='hapus'){
+  $idbarang=$uri[4];
+  $hapus=$db->qry($connect,"DELETE FROM tbarang WHERE idbarang='$idbarang'");
+  if($hapus)
+      header('location:'.$base_url.'barang');
+  else{
+      header('location:'.$base_url.'barang/hapus');
+  }  
 }
